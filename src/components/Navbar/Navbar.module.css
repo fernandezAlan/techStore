@@ -1,0 +1,23 @@
+.navbar{
+    width:100vw;
+    background-color: #fff;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;   
+}
+.link_container{
+    width: 40%;
+    margin-left: 15%;
+}
+
+.link{
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    margin: 0 1rem;
+    font-size: bold;
+}

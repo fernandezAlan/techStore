@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+.container {
+    margin-top: 15vh;
+    display: flex;
+    column-gap: 5vw;
+    justify-content: center;
+    width: 100vw;
+    font-family: "Lato", serif;
+}
+
+.subcontainer {
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    justify-content: space-between;
+}
+
+.subcontainer h2 {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0px;
+    text-align: left;
+    width: 100%;
+}
+
+.subcontainer p {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0px;
+    text-align: left;
+    width: 100%;
+}
+
+.img_iphone13 {
+    position: absolute;
+    width: 210px;
+    left: 30%;
+    object-fit: cover;
+    bottom: 0px;
+    animation-direction: reverse;
+}
+
+.next_page_icon {
+    position: absolute;
+    width: 30px;
+    bottom: 10px;
+    left: 30px;
+    opacity: 0.5;
+}
+
+.img_galaxy{
+    position: absolute;
+    width: 250px;
+    left: 10%;
+    object-fit: cover;
+    bottom: 0px;
+    transition: transform 0.3s ease-in-out;
+}
+.img_pixel{
+    position: absolute;
+    width: 450px;
+    right: 10%;
+    object-fit: cover;
+    bottom: 0px;
+    transition: transform 0.3s ease-in-out;
+}
+.pixel_card {
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.pixel_card h2,p,h3 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.pixel_card h3{
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.pixel_card p{
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0.3;
+    margin: 5px;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    border-radius: 0px;
+    width: 80px;
+    font-size: 12px;
+    margin-top: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
