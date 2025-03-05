@@ -9,15 +9,13 @@ export const ProductsContainer = styled.div`
   flex-direction: column;
   align-items: start;
   margin-top: 20px;
-  width: 100vw;
-  padding-left: 7vw;
-  padding-right: 7vw;
+  width: 100%;
 `;
 
 export const ProductsGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 35px;
+  display:flex;
+  width:100%;
+  justify-content: space-between;
 `;
 
 export const ProductCard = styled.div`
@@ -25,7 +23,6 @@ export const ProductCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
   padding: 20px;
   padding-bottom: 10px;
   border-radius: 10px;
@@ -60,19 +57,28 @@ export const ProductPrice = styled.p<ProductPriceProps>`
   margin-right: 10px;
   width: auto;
 `;
-
+export const PriceRatingContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+`;
 export const ProductName = styled.p<ProductPriceProps>`
   font-size: ${props=>props.size ? props.size :ProductPriceSize.small};
   margin-top: 10px;
   font-weight: bold;
+  user-select: all;
 `;
-
+export const HerthIconContainer = styled.div`
+position: absolute;
+top: 10px;
+right: 10px;
+`;
 export const Rating = styled.div`
   display: flex;
   justify-content: center;
   column-gap: 5px;
   align-items: center;
-  margin-top: 10px;
   background-color: rgba(255, 220, 181, 1);
   color: rgba(212, 141, 59, 1);
   font-weight: bold;
@@ -91,6 +97,7 @@ export const Description = styled.p`
   text-overflow: ellipsis;
   overflow: hidden;
   margin: 0px;
+  user-select: all;
 `;
 
 export const OffertLabel = styled.div`
@@ -118,18 +125,17 @@ export const NewProductIMG = styled.div<imgProps>`
 
 export const NewProductsContainer = styled.div`
   display: flex;
-  width: 100vw;
-  padding-left: 7vw;
-  padding-right: 7vw;
-  column-gap: 30px;
+  width: 100%;
+  justify-content: space-between;
   margin-top: 30px;
 `;
 //LIMITED TIME PRODUCT CARD
 export const LTproductCardContainer = styled.div`
   display: flex;
-  width: 100vw;
-  column-gap: 30px;
+  width: 100%;
   font-family: sans-serif;
+  justify-content: space-between;
+  margin-bottom: 20px;
 `;
 export const LTproductCard = styled.div`
   display: flex;
@@ -141,6 +147,7 @@ export const LTproductCard = styled.div`
   border-radius: 10px;
   color: black;
   padding-left: 20px;
+  padding-right:20px;
   box-shadow: -2px 0px 20px 3px rgba(125, 125, 125, 0.34);
   -webkit-box-shadow: -2px 0px 20px 3px rgba(125, 125, 125, 0.35);
   -moz-box-shadow: -2px 0px 20px 3px rgba(125, 125, 125, 0.35);

@@ -7,11 +7,12 @@ import NewProductsIMG from "../components/NewProductsIMG/NewProductsIMG";
 import LimitedTimeOfferts from "../components/LimitedTimeOfferts/LimitedTimeOfferts";
 const Home = () => {
   return (<>
-  <Navbar/>
-  <PromotionCards/>
-  <Products/>
-  <NewProductsIMG/>
-  <LimitedTimeOfferts/>
+  <main style={{paddingTop:"70px", paddingLeft:"7vw",paddingRight:"7vw",width:"100vw",boxSizing:"border-box"}}>
+    <PromotionCards/>
+    <Products/>
+    <NewProductsIMG/>
+    <LimitedTimeOfferts/>
+  </main>
   </>);
 };
 

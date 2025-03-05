@@ -1,10 +1,11 @@
 import React from "react";
-import { Description, LTproductCardContainer, OffertLabel, ProductCard, ProductName, ProductPrice, ProductsGrid, Rating } from "../styled/Products";
-import { Card } from "./Card";
+import { LTproductCardContainer, ProductsGrid } from "../styled/Products";
+import  Card  from "./Card";
+import ProdCard from "../Products/Card";
 import { TextAlign, Title } from "../styled/Text";
 import { getAllOfferts,getAllProducts } from "../../utils/Products";
 import PaginationButtons from "../PaginationButtons/PaginationButtons";
-import { HeartEmptyIcon, StartIcon } from "../icons/Icons";
+
 const LimitedTimeOfferts = () => {
   const [offerts, setOfferts] = React.useState(getAllOfferts());
   const [products, setProducts] = React.useState(getAllProducts())
@@ -19,7 +20,7 @@ const LimitedTimeOfferts = () => {
         untilSeconds: 50,
     }
   return (
-    <div style={{paddingLeft:"7vw",display:"flex",flexDirection:"column",alignItems:"flex-start",marginTop:"50px",marginBottom:"50px",paddingRight:"7vw"}}>
+    <div style={{display:"flex",flexDirection:"column",alignItems:"flex-start",marginTop:"50px",marginBottom:"50px"}}>
         <Title textAlign={TextAlign.left}>Limited time offers</Title>
           <PaginationButtons/>
         <LTproductCardContainer>
@@ -31,18 +32,7 @@ const LimitedTimeOfferts = () => {
         <PaginationButtons/>
     <ProductsGrid>
         {products.map((product,index) => {
-            return <ProductCard>
-            <OffertLabel>20% OFF</OffertLabel>
-            <div style={{position:"absolute",top:"10px",right:"10px"}}>
-                <HeartEmptyIcon/>
-            </div>
-            <img src="./i_phone_12.png" width="70px"/>
-            <div style={{display:"flex",justifyContent:"space-between",width:"100%"}}>
-            <ProductPrice>${product.price}</ProductPrice><Rating><StartIcon/>4.8</Rating>
-            </div>
-            <ProductName>{product.name}</ProductName>
-            <Description>{product.description}</Description>
-        </ProductCard>
+            return <ProdCard product={product}/>
         })}
         </ProductsGrid>
     </div>

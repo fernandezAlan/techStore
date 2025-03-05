@@ -22,7 +22,7 @@ interface Props {
   untilMinutes: number;
   untilSeconds: number;
 }
-export const Card: React.FC<Props> = ({
+ const Card: React.FC<Props> = ({
   name,
   description,
   untilDays,
@@ -35,7 +35,7 @@ export const Card: React.FC<Props> = ({
   return (
     <LTproductCard>
       <div>
-        <div style={{ display: "flex", columnGap:"10px"}}>
+        <div style={{ display: "flex", columnGap:"10px",userSelect:"none" }}>
           <img
             src="./iphone-prod.png"
             alt=""
@@ -47,7 +47,7 @@ export const Card: React.FC<Props> = ({
             <ProductName size={ProductPriceSize.large}>{name}</ProductName>
             <Description>{description}</Description>
             <Rating numberOfStars={4} />
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div style={{ display: "flex", alignItems: "center",userSelect:"none" }}>
               <ProductPrice
                 color={ProductPriceColor.green}
                 size={ProductPriceSize.large}
@@ -73,11 +73,15 @@ export const Card: React.FC<Props> = ({
         </div>
       </div>
       <div>ICONS...</div>
-      <div style={{ display: "flex",justifyContent:"center",columnGap:"10px" }}>
-        <img src="./iphone-prod.png" alt="" width={100} />
-        <img src="./iphone-prod.png" alt="" width={100} />
-        <img src="./iphone-prod.png" alt="" width={100} />
+      <div style={{ display: "flex",justifyContent:"center",columnGap:"10px" ,alignItems:"center"}}>
+      <img src="chevron_2.png" alt="" width={12} height={12} style={{rotate:"180deg"}}/>
+        <img src="./iphone-prod.png" alt="" width={80} />
+        <img src="./iphone-prod.png" alt="" width={80} />
+        <img src="./iphone-prod.png" alt="" width={80} />
+        <img src="chevron_2.png" alt="" width={12} height={12}/>
       </div>
     </LTproductCard>
   );
 };
+
+export default Card;
